@@ -1,0 +1,70 @@
+.container-principal{
+    margin-top: 24px;
+}
+
+.card{
+    margin-bottom: 16px;
+
+}
+
+footer{
+    background-color: rgb(206, 108, 245);
+    color: rgb(50, 7, 63);
+    text-align: center;
+    padding: 32xp;
+}
+
+ul{
+    margin-bottom: 0;
+}
+
+li{
+    list-style-type: none ;
+}
+
+
+.container-header-funcionario{
+    margin-top: 24px;
+
+    margin-bottom: 24px;
+
+    padding: 32px;
+
+    color: rgb(50, 7, 63);
+
+    background-color: rgb(206, 108, 245);
+
+    border-radius: 15px;
+
+    text-align: center;
+
+}
+
+
+.container-funcionario{
+
+    border: 1px solid rgb(50, 7, 63);
+
+    border-radius: 15px;
+
+    padding: 16px;
+
+
+}
+
+.td-controler{
+    width: 90px;
+}
+
+.container-btn-novo{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+.container-form-funcionario{
+    border: rgb(50, 7, 63);
+    border-radius: 15px;
+    padding: 16px;
+    width: 60%;
+}
