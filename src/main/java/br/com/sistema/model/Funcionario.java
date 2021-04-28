@@ -7,6 +7,8 @@ import javax.validation.constraints.Size;
 @Entity(name = "funcionario")
 public class Funcionario {
 
+    /** GeneratedValue **/
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,6 +24,8 @@ public class Funcionario {
     @Size(max = 30)
     @NotNull
     private String telefone;
+
+    /** Getter e Setter **/
 
     public Long getId() {
         return id;
@@ -54,6 +58,8 @@ public class Funcionario {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    /** ToString **/
 
     @Override
     public String toString() {

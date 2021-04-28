@@ -8,11 +8,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+/** Controller **/
+
 @Controller
 public class FuncionarioController {
 
+    /** Autowired **/
+
     @Autowired
     FuncionarioServiceImpl funcionarioService;
+
+    /** Mapping **/
 
     @GetMapping("/funcionario/list")
     public String list(Model model){
