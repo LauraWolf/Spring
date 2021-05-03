@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="pr-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Funcionarios</title>
+    <link rel="icon" type="image/png" th:href="@{/img/logo.png}">
+    <title>3C Sistemas Digitais</title>
+    <!--CSS-->
     <link rel="stylesheet" th:href="@{/bootstrap-5.0.0/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/fontawesome-5.15.3/css/all.css}">
     <link rel="stylesheet" th:href="@{/css/estilo.css}">
 
 </head>
 <body>
-
+    <!--NAV-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" th:href="@{/}">3C Sistemas Digitais</a>
@@ -23,63 +26,64 @@
                 <a class="nav-link active" aria-current="page" th:href="@{/}">Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " th:href="@{/funcionario/list}">Funcionario</a>
+                <a class="nav-link" th:href="@{/funcionario/list}">Funcionario</a>
               </li>
             </ul>
           </div>
         </div>
     </nav>
 
-    <div class="container">
-      
-    <div class="card">
-      <div class="card-header">
-        Produto A
+
+    <div class="container container-principal">
+
+      <div class="card">
+          <div class="card-header">
+            Produto A
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Detalhes do produto</h5>
+            <p class="card-text">Esse produto é muito bom.</p>
+            <a href="#" class="btn btn-dark">Go somewhere</a>
+          </div>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">Detalhes do produto</h5>
-        <p class="card-text">Esse produto é muito bom.</p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+
+      <div class="card">
+          <div class="card-header">
+            Produto B
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Detalhes do produto</h5>
+            <p class="card-text">Esse produto é muito bom.</p>
+            <a href="#" class="btn btn-dark">Go somewhere</a>
+          </div>
       </div>
-  </div>
 
-  <div class="card">
-    <div class="card-header">
-      Produto B
+      <div class="card">
+        <div class="card-header">
+          Produto C
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Detalhes do produto</h5>
+          <p class="card-text">Esse produto é muito bom.</p>
+          <a href="#" class="btn btn-dark">Go somewhere</a>
+        </div>
     </div>
-    <div class="card-body">
-      <h5 class="card-title">Detalhes do produto</h5>
-      <p class="card-text">Esse produto é muito bom.</p>
-      <a href="#" class="btn btn-dark">Go somewhere</a>
-    </div>
-</div>
-
-<div class="card">
-  <div class="card-header">
-    Produto C
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Detalhes do produto</h5>
-    <p class="card-text">Esse produto é muito bom.</p>
-    <a href="#" class="btn btn-dark">Go somewhere</a>
-  </div>
-</div>
-</div>
 
-<footer>
-  <u>
-    <li>3C sistemas Digitais</li>
-    <li>Contato: (48) 99888-1234</li>
-    <li>E-mail: SistemasDigitais@gmail.com</li>
-  </u>
-</footer>
+  <footer>
+    <ul>
+      <li><strong>3C Sistemas Digitais </strong></li>
+      <li>Contato: (48) 99888-1234</li>
+      <li>E-mail: SistemasDigitais3c@gmail.com</li>
+    </ul>
+  </footer>
 
-<!--JS-->
-<script th:src="@{/js/jquery-3.6.0.min.js}"></script>
-<script th:src="@{/js/popper.min.js}"></script>
-<script th:src="@{/bootstrap-5.0.0/js/bootstrap.min.js}"></script>
+    <!--JS-->
+    <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/bootstrap-5.0.0/js/bootstrap.min.js}"></script>
+    
 
-   
 
 </body>
 </html>
