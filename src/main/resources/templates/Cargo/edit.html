@@ -23,70 +23,66 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" th:href="@{/}">Principal</a>
+                <a class="nav-link" aria-current="page" th:href="@{/}">Principal</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" th:href="@{/funcionario/list}">Funcionario</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" th:href="@{/cargo/list}">Cargo</a>
+                <a class="nav-link active" th:href="@{/cargo/list}">Cargo</a>
               </li>
             </ul>
           </div>
         </div>
     </nav>
-
-
-    <div class="container container-principal">
-
-      <div class="card">
-          <div class="card-header">
-            Produto A
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Detalhes do produto</h5>
-            <p class="card-text">Esse produto é muito bom.</p>
-            <a href="#" class="btn btn-dark">Go somewhere</a>
-          </div>
-      </div>
-
-      <div class="card">
-          <div class="card-header">
-            Produto B
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Detalhes do produto</h5>
-            <p class="card-text">Esse produto é muito bom.</p>
-            <a href="#" class="btn btn-dark">Go somewhere</a>
-          </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          Produto C
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Detalhes do produto</h5>
-          <p class="card-text">Esse produto é muito bom.</p>
-          <a href="#" class="btn btn-dark">Go somewhere</a>
-        </div>
+      
+    <div class="container container-header-cargo">
+      <h3>Cargo</h3>
     </div>
-  </div>
 
-  <footer>
-    <ul>
-      <li><strong>3C Sistemas Digitais </strong></li>
-      <li>Contato: (48) 99888-1234</li>
-      <li>E-mail: SistemasDigitais3c@gmail.com</li>
-    </ul>
-  </footer>
+    <div class="container container-form-cargo">
+      <form th:action="@{/cargo/save}"
+        method="post"
+        th:object="${cargo}"
+      >
+          <div th:if="${erro}" class="alert alert-danger">
+              <span th:text="${erroMsg}"></span>
+          </div>
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" 
+            id="floatingInputId" placeholder="Código"
+            readonly th:field="${cargo.id}">
+          <label for="floatingInputId">Código</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" 
+            id="floatingInputNome" placeholder="Nome"
+            th:field="${cargo.nome}" required>
+          <label for="floatingInputNome">Nome</label>
+        </div>
+
+        <div class="row">
+           <div class="col">
+               <a th:href="@{/cargo/list}"
+                  class="btn btn-outline-secondary btn-form">
+                   <i class="fa fa-backspace"></i> Voltar
+               </a>
+           </div>
+           <div class="col">
+              <button type="submit"
+                  class="btn btn-outline-success btn-form">
+                   <i class="fa fa-save"></i> Salvar
+              </button>
+            </div>
+        </div>
+      </form>
+    </div>
 
     <!--JS-->
     <script th:src="@{/js/jquery-3.6.0.min.js}"></script>
     <script th:src="@{/js/popper.min.js}"></script>
     <script th:src="@{/bootstrap-5.0.0/js/bootstrap.min.js}"></script>
-    
-
 
 </body>
 </html>
